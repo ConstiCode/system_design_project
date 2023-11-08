@@ -1,0 +1,138 @@
+% -------------------------------------------------------------------------
+%                      Document settings and title page                   %
+% -------------------------------------------------------------------------
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{a4paper, top=3cm, bottom=3cm}
+\usepackage[utf8]{inputenc}
+\usepackage{ngerman}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{subfigure}
+
+% In German, new paragraphs are not indented
+\setlength{\parindent}{0cm}
+
+% Define new command for red color emphasis
+% Use \red{text} to make your text red
+%\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+% Title section
+\title{
+  \vspace{2cm}  % Add a little space
+  \Huge System Design Projekt\\[0.25cm]
+  \LARGE Zwischenbericht WS 23/24
+}
+
+% Your three-digit group number and group name
+\author{\Large \#056 5678}
+
+% Today's date
+\date{\today}  % \today outputs today's date
+
+% -------------------------------------------------------------------------
+%                              Document starts here                       %
+% -------------------------------------------------------------------------
+\begin{document}
+\maketitle  % Inserts the title into document
+
+% Please remove this section before handing in your work!
+Jede Gruppe muss jeweils einen Zwischenbericht als PDF-Datei im \href{https://sdp.uni-freiburg.de/redirect/ilias}{ILIAS} hochladen. 
+%
+% Der reine Fließtext des Berichtes muss, ohne Überschriften und Bilder, mit Schriftgröße~12, zwischen zwei und drei DIN A4 Seiten lang sein. 
+%
+Der Bericht muss aus 1.000 bis 1.500 Wörtern bestehen, wobei die Anzahl der Wörter im Dokument in Overleaf \href{https://www.overleaf.com/learn/how-to/Is_there_a_way_to_run_a_word_count_that_doesn%27t_include_LaTeX_commands%3F
+}{eingesehen werden kann}.
+%
+%Der reine Fließtext des Berichtes muss aus 1.000 bis 1.500 Wörtern bestehen. Die Anzahl der Wörter im Dokument kann in Overleaf im Menü eingesehen werden. 
+%
+Darüber hinaus müssen, wie unten angegeben, mindestens drei Bilder vom eigenen Team-Roboter enthalten sein. Die verschiedenen Unterpunkte dienen als Orientierungshilfe und müssen nicht genau eingehalten werden. Abgaben ohne Gruppenname und oder dreistellige Gruppennummer können nicht berücksichtigt werden! Bitte passen Sie daher vor dem Einreichen diese Vorlage entsprechend an und entfernen jeweils die Arbeitsbeschreibung sowie diesen Abschnitt.
+
+\section{Gruppenmitglieder}
+\begin{itemize}
+  \item Constantin Dietrich (5126278)
+  \item Max Gerstenkorn (3536669)
+  \item Emil Landbeck (5146287)
+  \item Martin Steen (5780883)
+\end{itemize}
+
+\section{Roboterkonzept}
+Beschreiben Sie einleitend das Grundkonzept Ihres Roboters und wie Sie vorhaben, die jeweiligen Teilaufgaben zu lösen. Dies \textbf{muss} mit jeweils mindestens einem Foto, wie in Abbildung~\ref{Figure:Front} und~\ref{Figure:Side} bzw. in Abbildung~\ref{Figure:BallLoading} gezeigt, illustriert werden. Jedes Bild, dass Sie zeigen, \textbf{muss} wie es im wissenschaftlichen Umfeld üblich ist, im Fließtext referenziert und kurz erklärt werden. Tipp: Mit geschützten Leerzeichen (Tilde) \textit{können} Zeilenumbrüche unterbunden werden!
+
+\subsection{Linienverfolgung}
+% Your content here
+
+\subsection{Enge Kurven}
+% Your content here
+
+\subsection{Wendevorgang}
+% Your content here
+
+\subsection{Schranke}
+% Your content here
+
+\subsection{Klotz wegschieben}
+% Your content here
+
+\subsection{Streckenunterbrechungen}
+% Your content here
+
+\subsection{Tunnel}
+% Your content here
+
+\subsection{Steigung und Gefälle}
+% Your content here
+
+\subsection{Schwerpunkt}
+% Your content here
+
+\subsection{Umgang mit dem Ball}
+% Your content here
+
+% Subfigure with two images
+\begin{figure}[H]
+  \centering
+  \subfigure[Frontansicht]{
+    \includegraphics[width=0.47\textwidth]{example-image.png}
+    \label{Figure:Front}
+  }
+  \subfigure[Seitenansicht]{
+    \includegraphics[width=0.47\textwidth]{example-image.png}
+    \label{Figure:Side}
+  }
+  \caption{Bilder der Front- und Seitenansicht unseres ...}  % Your content here
+  
+  \label{Figure:RobotPics}  % Labels are used for referencing with \ref{}
+\end{figure}
+
+% Single centered image
+\begin{figure}[H]
+  \centering
+  % Image with 70% of document width.
+  \includegraphics[width=0.7\textwidth]{example-image.png}
+  \caption{Seitenansicht der Ballaufnahme-Vorrichtung.}
+  \label{Figure:BallLoading}
+\end{figure}
+
+
+\section{Softwarekonzept}
+Beschreiben Sie hier, wie Sie die Programmierung des Roboters umgesetzt haben und erklären Sie im Detail \textbf{z.B.} die \href{https://de.wikipedia.org/wiki/Endlicher_Automat}{State Machine} oder den \href{https://studyflix.de/informatik/pid-regler-1450}{PID-Regler} und den \href{https://www.youtube.com/watch?v=Qm8jX0L9oSQ&t=525s}{Einfluss der Regelglieder} auf ihren Roboter. Hierbei soll allerdings nicht jede Zeile Ihres Programms einzeln dokumentiert werden!
+
+\section{Fortschritt}
+Beschreiben Sie den aktuellen Stand des Projekts z.B. wie die Erkennung beim Meilenstein funktioniert hat und welche Aufgaben ihr Roboter bereits bewältigen kann.
+
+
+\section{Fehleranalyse}
+Beschreiben Sie die Herausforderungen, die Ihnen bei der Entwicklung begegnet sind. Welche Probleme hatten Sie bisher beim Bau der Hardware und bei der Bewältigung der einzelnen Aufgaben? Zu welchen Lösungen sind Sie gekommen? Welche Ihrer Ideen haben Sie verworfen und wieso?
+
+
+\section{Weiteres Vorgehen}
+Beschreiben Sie hier, welche Teile des Systems noch fehlen. Falls es noch Probleme gibt, gehen Sie auf Ideen zur Lösung ein; falls nicht, auf generelle Ideen zur weiteren Verbesserung des Systems.
+
+
+\section{Arbeitsteilung}
+Beschreiben Sie kurz, ob und wie die Arbeit innerhalb der Gruppe aufgeteilt war. Teilen Sie uns insbesondere mit, falls derzeit noch registrierte Teilnehmer nicht mehr mitarbeiten oder ausgeschieden sind.
+
+\end{document}
