@@ -1,0 +1,71 @@
+// Programm First Line
+
+#define MOVE_TIME 5000
+#define TURN_TIME 500 
+
+#define THOLD_L 40
+#define THOLD_C 45
+#define THOLD_R 45
+#define THOLD_ULTRA 10
+
+sub turnaround()
+{
+  OnFwd(OUT_A, 50);
+  OnRev(OUT_B, 50);
+  Wait(1200);
+  OnFwd(OUT_AB, 0);
+}
+
+sub go_right() 
+{
+  OnFwd(OUT_A, 70);
+  OnFwd(OUT_B, 20);
+}
+
+sub go_left()
+{
+  OnFwd(OUT_B, 70);
+  OnFwd(OUT_A, 20);
+}
+
+sub go_straight()
+{
+  OnFwd(OUT_AB, 50);
+}
+
+task main()
+{
+
+SetSensorLight(S1);
+SetSensorLight(S2);
+SetSensorLight(S3);
+SetSensorLowspeed(S4);
+
+NumOut(0, LCD_LINE4, SensorUS(S4), true);
+
+go_straight();
+
+while (SensorUS(S4) > 10) {
+  Wait(50);
+}
+
+turnaround();
+
+while (true)
+{
+  NumOut(0, LCD_LINE1, Sensor(S1), true);
+  NumOut(0, LCD_LINE2, Sensor(S2), false);
+  NumOut(0, LCD_LINE3, Sensor(S3), false);
+  NumOut(0, LCD_LINE4, SensorUS(S4), false);
+  if (Sensor(S1) < THOLD_L) {
+    go_left();
+  }
+  else if (Sensor(S3) < THOLD_R) {
+    go_right();
+  }
+  else {
+    go_straight();
+  }
+}
+
+}
